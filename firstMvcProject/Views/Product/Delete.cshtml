@@ -1,0 +1,96 @@
+﻿@model firstMvcProject.Models.DBModel.Urunler
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Bu Ürünü Silmek İstiyor Musunuz ?</h3>
+<div>
+    <h4>Urunler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirimdekiMiktar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirimdekiMiktar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirimFiyati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirimFiyati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HedefStokDuzeyi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HedefStokDuzeyi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YeniSatis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YeniSatis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnAzYenidenSatisMikatari)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnAzYenidenSatisMikatari)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sonlandi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sonlandi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategoriler.KategoriAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategoriler.KategoriAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tedarikciler.SirketAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tedarikciler.SirketAdi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
